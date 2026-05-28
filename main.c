@@ -43,15 +43,21 @@ int main() {
         printf("é só entre 1 e 0 seu animal\n");
         return 1;
     } else {
+        srand(time(NULL));
+        for( int j = 0; j > 3, j++); {
+        int numero_aleatorio = rand() % 3;
+        printf("%d", numero_aleatorio);
+        scanf("%d",&rng[j]);
+    }
         //botar gerador de random number aq
         printf("Vamos começar o jogo\n");
         printf("Você tera 10 tentativas para adivinhar um numero secreto\n");
         printf("qual teu chute?: ");
-        while(int i=0; i<4;i++){
+
+        while( int i=0; i<4;i++){
             printf("qual teu chute?: ");
             scanf("%d", &chute[i]);
        }
-
 
 
 
