@@ -20,14 +20,14 @@ int continuar()
 
 
 int main() {
-    int iniciar;
-    while (int i == 0, i != 0, i);
+    int iniciar, i;
+    while ( i == 0, i != 0, i);
     printf("Bem vindo ao Mastermind!");
     printf("você deseja jogar?");
     printf("1 - Jogar");
     printf("0 - não jogar");
     printf("Opção: ");
-    scanf("%d", iniciar);
+    scanf("%d", &iniciar);
     if (iniciar == 0){
         return 1;
     } else if (iniciar > 1) {
