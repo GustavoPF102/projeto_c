@@ -21,20 +21,23 @@ int continuar()
 
 int main() {
     int iniciar, i;
-    while ( i == 0, i != 0, i);
-    printf("Bem vindo ao Mastermind!");
-    printf("você deseja jogar?");
-    printf("1 - Jogar");
-    printf("0 - não jogar");
-    printf("Opção: ");
+    printf("\nBem vindo ao Mastermind!");
+    printf("\nvocê deseja jogar?");
+    printf("\n1 - Jogar");
+    printf("\n0 - não jogar");
+    printf("\nOpção: ");
     scanf("%d", &iniciar);
+
+    
+
     if (iniciar == 0){
+        printf("o jogo acabou porra\n");
         return 1;
     } else if (iniciar > 1) {
-        printf("é só entre 1 e 0 seu animal");
+        printf("é só entre 1 e 0 seu animal\n");
     } else {
-        printf("vamos começar o jogo");
-        printf("Você tera 10 tentativas para adivinhar um numero secreto");
+        printf("Vamos começar o jogo\n");
+        printf("Você tera 10 tentativas para adivinhar um numero secreto\n");
     }
 
     return 0;
