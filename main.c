@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 #define MAXTENTATIVAS 10
 
 int continuar()
@@ -20,8 +22,12 @@ int continuar()
 
 
 int main() {
-    int iniciar, i;
-    printf("\nBem vindo ao Mastermind!");
+    int iniciar;
+    int tentrest = 10;
+    int chute[4];
+    int rng[4];
+
+    printf("\nBem vindo ao Mastermind de baixo orçamento!");
     printf("\nvocê deseja jogar?");
     printf("\n1 - Jogar");
     printf("\n0 - não jogar");
@@ -35,9 +41,22 @@ int main() {
         return 1;
     } else if (iniciar > 1) {
         printf("é só entre 1 e 0 seu animal\n");
+        return 1;
     } else {
+        //botar gerador de random number aq
         printf("Vamos começar o jogo\n");
         printf("Você tera 10 tentativas para adivinhar um numero secreto\n");
+        printf("qual teu chute?: ");
+        while(int i=0; i<4;i++){
+            printf("qual teu chute?: ");
+            scanf("%d", &chute[i]);
+       }
+
+
+
+
+
+
     }
 
     return 0;
