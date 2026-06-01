@@ -26,7 +26,7 @@ int main() {
     int tentrest = 10;
     int chute[4];
     int rng[4];
-
+    int i, j;
     printf("\nBem vindo ao Mastermind de baixo orçamento!");
     printf("\nvocê deseja jogar?");
     printf("\n1 - Jogar");
@@ -44,26 +44,21 @@ int main() {
         return 1;
     } else {
         srand(time(NULL));
-        for( int j = 0; j > 3, j++); {
-        int numero_aleatorio = rand() % 3;
-        printf("%d", numero_aleatorio);
-        scanf("%d",&rng[j]);
+        for(j = 0; j > 3; j++); {
+            int numero_aleatorio = rand() % 3;
+            printf("%d", numero_aleatorio);
+            scanf("%d",&rng[j]);
     }
-        //botar gerador de random number aq
+        
         printf("Vamos começar o jogo\n");
         printf("Você tera 10 tentativas para adivinhar um numero secreto\n");
-        printf("qual teu chute?: ");
-
-        while( int i=0; i<4;i++){
+        
+        while(i < 4);{
             printf("qual teu chute?: ");
-            scanf("%d", &chute[i]);
+            scanf("%d", &chute[1]);    
+            i++;
        }
 
-
-
-
-
     }
-
     return 0;
 }
