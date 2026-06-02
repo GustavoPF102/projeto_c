@@ -34,15 +34,15 @@ int main() {
         printf("Você tera 10 tentativas para adivinhar um numero secreto\n");
         
         while (i != 0){
-        printf("qual teu chute? (são 4 numeros): ");
-        scanf("%d", &chute[i]);
+            printf("qual teu chute? (são 4 numeros): ");
+            scanf("%d", &chute[i]);
 
-        //verificar se ta igual
+            //verificar se ta igual
 
-        i--;
+            i--;
         }
 
-        //printf("%d\n", numero_aleatorio[0]);
+        printf("%d\n", numero_aleatorio[0]);
     }
     return 0;
 }
