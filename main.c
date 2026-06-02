@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 
+
 int main() {
     int iniciar;
     int chute[4];
@@ -26,13 +27,13 @@ int main() {
     else {
         srand(time(NULL));
         for(j = 0; j > 4; j++); {
-            numero_aleatorio[j] = rand() % 10000;
+            numero_aleatorio[j] = rand() % 10;
             printf("n: %d\n", numero_aleatorio[j]);
         }
 
         printf("Vamos começar o jogo\n");
         printf("Você tera 10 tentativas para adivinhar um numero secreto\n");
-        
+
         while (i < 4){
             printf("qual teu chute? (são 4 numeros): ");
             scanf("%d", &chute[i]);
@@ -43,6 +44,9 @@ int main() {
         }
 
         printf("%d\n", numero_aleatorio[0]);
+        printf("%d\n", numero_aleatorio[1]);
+        printf("%d\n", numero_aleatorio[2]);
+        printf("%d\n", numero_aleatorio[3]);
     }
     return 0;
 }
