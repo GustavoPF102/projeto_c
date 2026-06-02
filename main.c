@@ -1,35 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#define MAXTENTATIVAS 10
-
-int continuar()
-{
-    int continua;
-    printf("deseja continuar jogando?");
-    printf("1 - Continuar a jogar");
-    printf("0 - não continuar a jogar");
-    printf("Opção: ");
-    scanf("%d", &continua);
-    if (continua == 0){
-        return 1;
-    } else if (continua > 1) {
-        printf("é só entre 1 e 0 seu animal");
-    } else {
-        printf("vamos continuar o jogo");
-}
-}
-
 
 int main() {
     int iniciar;
-    int tentrest = 10;
     int chute[4];
-    int rng[4];
     int j;
-    int i = 10;
-    int x=10
-    
+    int i = 4;
+    int numero_aleatorio[4];
     
     
     printf("\nBem vindo ao Mastermind de baixo orçamento!");
@@ -50,16 +28,16 @@ int main() {
     }  
     else {
         srand(time(NULL));
-        for(j = 0; j > 3; j++); {
-            int numero_aleatorio = rand() % 3;
-            printf("%d", numero_aleatorio);
-            scanf("%d",&rng[j]);
+        for(j = 0; j > 4; j++); {
+            numero_aleatorio[j] = rand() % 1000;
+            printf("n: %d", numero_aleatorio[j]);
         
 
+        }
 
         printf("Vamos começar o jogo\n");
         printf("Você tera 10 tentativas para adivinhar um numero secreto\n");
-        }
+        
         
 
 
@@ -67,13 +45,14 @@ int main() {
         printf("qual teu chute? (são 4 numeros): ");
         scanf("%d", &chute[i]);
         
+        //verificar se ta igual
 
         i--;
         }
+        //printf("%d\n", numero_aleatorio[0]);
     }
 
- }       
         
-   
+        
     return 0;
 }
