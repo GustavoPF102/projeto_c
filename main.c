@@ -9,15 +9,12 @@ int main() {
     int i = 4;
     int numero_aleatorio[4];
     
-    
     printf("\nBem vindo ao Mastermind de baixo orçamento!");
     printf("\nvocê deseja jogar?");
     printf("\n1 - Jogar");
     printf("\n0 - não jogar\n");
     printf("Opção: ");
     scanf("%d", &iniciar);
-
-    
 
     if (iniciar == 0){
         printf("o jogo acabou porra\n");
@@ -31,28 +28,21 @@ int main() {
         for(j = 0; j > 4; j++); {
             numero_aleatorio[j] = rand() % 1000;
             printf("n: %d", numero_aleatorio[j]);
-        
-
         }
 
         printf("Vamos começar o jogo\n");
         printf("Você tera 10 tentativas para adivinhar um numero secreto\n");
         
-        
-
-
         while (i != 0){
         printf("qual teu chute? (são 4 numeros): ");
         scanf("%d", &chute[i]);
-        
+
         //verificar se ta igual
 
         i--;
         }
+
         //printf("%d\n", numero_aleatorio[0]);
     }
-
-        
-        
     return 0;
 }
