@@ -43,10 +43,10 @@ int main() {
             i++;
         }
 
-        printf("%d\n", numero_aleatorio[0]);
-        printf("%d\n", numero_aleatorio[1]);
-        printf("%d\n", numero_aleatorio[2]);
-        printf("%d\n", numero_aleatorio[3]);
+        printf("%d\n", numero_aleatorio[j]);
+        printf("%d\n", numero_aleatorio[j]);
+        printf("%d\n", numero_aleatorio[j]);
+        printf("%d\n", numero_aleatorio[j]);
     }
     return 0;
 }
