@@ -26,9 +26,9 @@ int main() {
     }  
     else {
         srand(time(NULL));
-        for(j = 0; j > 4; j++); {
+        for(j = 0; j < 4; j++) {
             numero_aleatorio[j] = rand() % 10;
-            printf("n: %d\n", numero_aleatorio[j]);
+  
         }
 
         printf("Vamos começar o jogo\n");
