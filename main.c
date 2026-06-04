@@ -16,31 +16,29 @@ int main() {
     printf("\nBem vindo ao Mastermind de baixo orçamento!");
     printf("\nvocê deseja jogar?");
     printf("\n1 - Jogar");
-    printf("\n0 - não jogar\n");
+    printf("\n0 - Não jogar\n");
     printf("Opção: ");
     scanf("%d", &iniciar);
 
     if (iniciar == 0){
-        printf("o jogo acabou porra\n");
+        printf("O jogo acabou medroso \n");
         return 1;
-    } else if (iniciar > 1) {
-        printf("é só entre 1 e 0 seu animal\n");
-        return 1;
-    }  
-    else {
-        srand(time(NULL));
+    }   else if (iniciar > 1) {
+            printf("É só entre 1 e 0 seu animal\n");
+            return 1;
+    }   else {
+            srand(time(NULL));
 
-    for (j = 0; j < 4; j++) {
-    numero_aleatorio[j] = (rand() % 6) + 1;
+            for (j = 0; j < 4; j++) {
+                numero_aleatorio[j] = (rand() % 6) + 1;
 
-    for (k = 0; k < j; k++) {
-        if (numero_aleatorio[j] == numero_aleatorio[k]) {
-            j--;
-            break;
+            for (k = 0; k < j; k++) {
+                if (numero_aleatorio[j] == numero_aleatorio[k]) {
+                j--;
+                break;
+            }
         }
-    }
-
-}
+    }   
         printf("%d\n", numero_aleatorio[0]);
         printf("%d\n", numero_aleatorio[1]);
         printf("%d\n", numero_aleatorio[2]);
@@ -48,7 +46,14 @@ int main() {
 
         
         printf("Vamos começar o jogo\n");
-        printf("Você tera 10 tentativas para adivinhar um numero secreto\n");
+        printf("Você tera 10 tentativas para adivinhar um código secreto\n");
+        printf("--------");
+        printf("Regras:");
+        printf("O código tem 4 digitos que vão de 1 a 6");
+        printf("Os números não se repetem no código");
+        printf("Siga a maneira que o jogo ensina para dar seu palpite");
+        printf("Se divirta");
+        printf("--------");
 
         while (i < MAXTENTATIVAS){
             printf("Qual teu chute de 4 numeros? (De forma a ficar: X X X X): ");
@@ -114,9 +119,10 @@ int main() {
             printf("O código secreto era: %d %d %d %d\n", numero_aleatorio[0], numero_aleatorio[1], numero_aleatorio[2], numero_aleatorio[3]);
             return 0;
         }
+            verificavitoria = 0;
             i++;
         }
-        printf("Que pena!, Você não acertou o número secreto!\n");
+        printf("Que pena!, Você não acertou o código secreto!\n");
         printf("O código secreto era: %d %d %d %d\n", numero_aleatorio[0], numero_aleatorio[1], numero_aleatorio[2], numero_aleatorio[3]);
     return 0;
 }
