@@ -6,10 +6,11 @@
 int main() {
     int iniciar;
     int chute[4];
-    int j, a, temp;
-    int i = 1;
+    int j, k;
+    int i = 0;
     int numero_aleatorio[4];
     int L = 0;
+    int conttentativas = 0;
 
     printf("\nBem vindo ao Mastermind de baixo orçamento!");
     printf("\nvocê deseja jogar?");
@@ -31,25 +32,24 @@ int main() {
             numero_aleatorio[j] = (rand() % 6) + 1;
             printf("%d\n", numero_aleatorio[j]);
 
-  
+
         }
 
         printf("Vamos começar o jogo\n");
         printf("Você tera 10 tentativas para adivinhar um numero secreto\n");
 
         while (i < MAXTENTATIVAS){
-            printf("qual teu chute? (são 4 numeros): ");
+            printf("Qual teu chute de 4 numeros? (De forma a ficar: X X X X): ");
             for(L = 0; L < 4; L++){
             scanf("%d", &chute[L]);}
-            if (chute[0] == numero_aleatorio[0] && chute[0] != numero_aleatorio[1, 2, 3]) {
+            if (chute[0] == numero_aleatorio[0] && chute[0] != numero_aleatorio[1] && chute[0] != numero_aleatorio[2] && chute[0] != numero_aleatorio[3]) {
                 printf("o primeiro numero ta certo\n");
-            else if
         }   else {
             printf("o primeiro numero ta errado\n");
         } 
+        conttentativas++;
 
-
-            printf("tentativas já utulizadas: %d / %d\n", i, MAXTENTATIVAS);
+            printf("tentativas já utilizadas: %d / %d\n", conttentativas, MAXTENTATIVAS);
 
             //verificar se ta igual
 
@@ -57,6 +57,7 @@ int main() {
         }
 
 
-    }
+    
     return 0;
+}
 }
