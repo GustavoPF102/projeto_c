@@ -27,7 +27,7 @@ int main() {
     else {
         srand(time(NULL));
         for(j = 0; j < 4; j++) {
-            numero_aleatorio[j] = rand() % 7;
+            numero_aleatorio[j] = (rand() % 6) + 1;
             printf("%d\n", numero_aleatorio[j]);
 
   
@@ -36,9 +36,10 @@ int main() {
         printf("Vamos começar o jogo\n");
         printf("Você tera 10 tentativas para adivinhar um numero secreto\n");
 
-        while (i < MAXTENTATIVAS){
+        while (i < MAXTENTATIVAS + 1){
             printf("qual teu chute? (são 4 numeros): ");
             scanf("%d", &chute[i]);
+            printf("tentativas já utulizadas: %d / %d\n", i, MAXTENTATIVAS);
 
             //verificar se ta igual
 
