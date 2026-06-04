@@ -11,7 +11,7 @@ int main() {
     int numero_aleatorio[4];
     int L = 0;
     int conttentativas = 0;
-
+    int verificavitoria = 0;
     printf("\nBem vindo ao Mastermind de baixo orçamento!");
     printf("\nvocê deseja jogar?");
     printf("\n1 - Jogar");
@@ -43,15 +43,60 @@ int main() {
             for(L = 0; L < 4; L++){
             scanf("%d", &chute[L]);}
             if (chute[0] == numero_aleatorio[0] && chute[0] != numero_aleatorio[1] && chute[0] != numero_aleatorio[2] && chute[0] != numero_aleatorio[3]) {
-                printf("o primeiro numero ta certo\n");
+                printf("o primeiro numero ta certo e no lugar certo\n");
+                verificavitoria++;
+        }   else if (chute[0] != numero_aleatorio[0] && chute[0] == numero_aleatorio[1] && chute[0] != numero_aleatorio[2] && chute[0] != numero_aleatorio[3]) {
+                printf("o primeiro numero ta certo mas no lugar errado\n");
+        }   else if (chute[0] != numero_aleatorio[0] && chute[0] != numero_aleatorio[1] && chute[0] == numero_aleatorio[2] && chute[0] != numero_aleatorio[3]) {
+                printf("o primeiro numero ta certo mas no lugar errado\n");
+        }   else if (chute[0] != numero_aleatorio[0] && chute[0] != numero_aleatorio[1] && chute[0] != numero_aleatorio[2] && chute[0] == numero_aleatorio[3]) {
+                printf("o primeiro numero ta certo mas no lugar errado\n");
         }   else {
             printf("o primeiro numero ta errado\n");
+            verificavitoria = 0;
+        } 
+            if (chute[1] != numero_aleatorio[0] && chute[1] == numero_aleatorio[1] && chute[1] != numero_aleatorio[2] && chute[1] != numero_aleatorio[3]) {
+                printf("o segundo numero ta certo e no lugar certo\n");
+                verificavitoria++;
+        }   else if (chute[1] == numero_aleatorio[0] && chute[1] != numero_aleatorio[1] && chute[1] != numero_aleatorio[2] && chute[1] != numero_aleatorio[3]) {
+                printf("o segundo numero ta certo mas no lugar errado\n");
+        }   else if (chute[1] != numero_aleatorio[0] && chute[1] != numero_aleatorio[1] && chute[1] == numero_aleatorio[2] && chute[1] != numero_aleatorio[3]) {
+                printf("o segundo numero ta certo mas no lugar errado\n");
+        }   else if (chute[1] != numero_aleatorio[0] && chute[1] != numero_aleatorio[1] && chute[1] != numero_aleatorio[2] && chute[1] == numero_aleatorio[3]) {
+                printf("o segundo numero ta certo mas no lugar errado\n");
+        }   else {
+            printf("o segundo numero ta errado\n");
+            verificavitoria = 0;
+        } 
+        if (chute[2] != numero_aleatorio[0] && chute[2] != numero_aleatorio[1] && chute[2] == numero_aleatorio[2] && chute[2] != numero_aleatorio[3]) {
+                printf("o terceiro numero ta certo e no lugar certo\n");
+                verificavitoria++;
+        }   else if (chute[2] == numero_aleatorio[0] && chute[2] != numero_aleatorio[1] && chute[2] != numero_aleatorio[2] && chute[2] != numero_aleatorio[3]) {
+                printf("o terceiro numero ta certo mas no lugar errado\n");
+        }   else if (chute[2] != numero_aleatorio[0] && chute[2] == numero_aleatorio[1] && chute[2] != numero_aleatorio[2] && chute[2] != numero_aleatorio[3]) {
+                printf("o terceiro numero ta certo mas no lugar errado\n");
+        }   else if (chute[2] != numero_aleatorio[0] && chute[2] != numero_aleatorio[1] && chute[2] != numero_aleatorio[2] && chute[2] == numero_aleatorio[3]) {
+                printf("o terceiro numero ta certo mas no lugar errado\n");
+        }   else {
+            printf("o terceiro numero ta errado\n");
+            verificavitoria = 0;
+        } 
+        if (chute[3] != numero_aleatorio[0] && chute[3] != numero_aleatorio[1] && chute[3] != numero_aleatorio[2] && chute[3] == numero_aleatorio[3]) {
+                printf("o quarto numero ta certo e no lugar certo\n");
+                verificavitoria++;
+        }   else if (chute[3] == numero_aleatorio[0] && chute[3] != numero_aleatorio[1] && chute[3] != numero_aleatorio[2] && chute[3] != numero_aleatorio[3]) {
+                printf("o quarto numero ta certo mas no lugar errado\n");
+        }   else if (chute[3] != numero_aleatorio[0] && chute[3] != numero_aleatorio[1] && chute[3] == numero_aleatorio[2] && chute[3] != numero_aleatorio[3]) {
+                printf("o quarto numero ta certo mas no lugar errado\n");
+        }   else if (chute[3] != numero_aleatorio[0] && chute[3] != numero_aleatorio[1] && chute[3] != numero_aleatorio[2] && chute[3] == numero_aleatorio[3]) {
+                printf("o quarto numero ta certo mas no lugar errado\n");
+        }   else {
+            printf("o quarto numero ta errado\n");
+            verificavitoria = 0;
         } 
         conttentativas++;
 
             printf("tentativas já utilizadas: %d / %d\n", conttentativas, MAXTENTATIVAS);
-
-            //verificar se ta igual
 
             i++;
         }
