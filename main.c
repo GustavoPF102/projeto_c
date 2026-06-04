@@ -12,6 +12,7 @@ int main() {
     int L = 0;
     int conttentativas = 0;
     int verificavitoria = 0;
+
     printf("\nBem vindo ao Mastermind de baixo orçamento!");
     printf("\nvocê deseja jogar?");
     printf("\n1 - Jogar");
@@ -28,13 +29,24 @@ int main() {
     }  
     else {
         srand(time(NULL));
-        for(j = 0; j < 4; j++) {
-            numero_aleatorio[j] = (rand() % 6) + 1;
-            printf("%d\n", numero_aleatorio[j]);
 
+    for (j = 0; j < 4; j++) {
+    numero_aleatorio[j] = (rand() % 6) + 1;
 
+    for (k = 0; k < j; k++) {
+        if (numero_aleatorio[j] == numero_aleatorio[k]) {
+            j--;
+            break;
         }
+    }
 
+}
+        printf("%d\n", numero_aleatorio[0]);
+        printf("%d\n", numero_aleatorio[1]);
+        printf("%d\n", numero_aleatorio[2]);
+        printf("%d\n", numero_aleatorio[3]);
+
+        
         printf("Vamos começar o jogo\n");
         printf("Você tera 10 tentativas para adivinhar um numero secreto\n");
 
@@ -97,12 +109,15 @@ int main() {
         conttentativas++;
 
             printf("tentativas já utilizadas: %d / %d\n", conttentativas, MAXTENTATIVAS);
-
+        if (verificavitoria == 4) {
+            printf("Parabéns você ganhou adivinhando o código secreto!\n");
+            printf("O código secreto era: %d %d %d %d\n", numero_aleatorio[0], numero_aleatorio[1], numero_aleatorio[2], numero_aleatorio[3]);
+            return 0;
+        }
             i++;
         }
-
-
-    
+        printf("Que pena!, Você não acertou o número secreto!\n");
+        printf("O código secreto era: %d %d %d %d\n", numero_aleatorio[0], numero_aleatorio[1], numero_aleatorio[2], numero_aleatorio[3]);
     return 0;
 }
 }
