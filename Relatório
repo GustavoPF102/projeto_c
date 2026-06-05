@@ -31,3 +31,4 @@ int perguntarContinuar() {
 
 //Consideramos que o código poderia ser aprimorado com mais funções para organizar melhor as diferentes partes do jogo, como a geração de números aleatórios, a comparação dos números, a contagem de tentativas, etc.
 //Entretanto, essas ideias de aprimoramento vieram a mente depois de termos escrito o código, e decidimos manter a estrutura atual para garantir que o jogo funcione corretamente dentro do prazo estabelecido.
+//Foi um projeto divertido de se desenvolver.
