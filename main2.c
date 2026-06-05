@@ -79,13 +79,12 @@ int main() {
         }
     }
 
-    if (k == j) {
-       printf("%d ", numero_aleatorio[j]); 
+    if (k == j) { 
        j++;
 }
 }
     
-        
+        printf("--------------------\n");
         printf("Vamos começar o jogo\n");
         printf("Você tera 10 tentativas para adivinhar um numero secreto\n");
         printf("Regras:\n");
@@ -93,7 +92,8 @@ int main() {
         printf("Os números não se repetem no código\n");
         printf("Siga a maneira que o jogo ensina para dar seu palpite\n");
         printf("Se divirta\n");
-        printf("--------\n");
+       printf("--------------------\n");
+
 
         while (i < MAXTENTATIVASEASY){
             printf("Qual teu chute de 4 numeros? (De forma a ficar: X X X X): ");
@@ -172,7 +172,7 @@ int main() {
         printf("--O código secreto era: %d %d %d %d--\n", numero_aleatorio[0], numero_aleatorio[1], numero_aleatorio[2], numero_aleatorio[3]);  
         printf("Status do Jogo: Derrota!\n");
         return 0;
-    }else if (modo == 2) {
+    }   else if (modo == 2) {
         printf("Você escolheu o Modo Difícil!\n");
             srand(time(NULL));
         for (j = 0; j < 4; ) {
@@ -185,10 +185,10 @@ int main() {
         }
 
         if (k == j) {
-        printf("%d ", numero_aleatorio[j]); 
+            printf("Número gerado: %d\n", numero_aleatorio[j]);
         j++;
 }
-}
+}       printf("--------------------\n");
         printf("Vamos começar o jogo\n");
         printf("Você tera 10 tentativas para adivinhar um numero secreto\n");
         printf("Regras:\n");
@@ -196,7 +196,8 @@ int main() {
         printf("Os números não se repetem no código\n");
         printf("Siga a maneira que o jogo ensina para dar seu palpite\n");
         printf("Se divirta\n");
-        printf("--------\n");
+        printf("--------------------\n");
+        
 
         while (i < MAXTENTATIVASHARD){
             printf("Qual teu chute de 4 numeros? (De forma a ficar: X X X X): ");
@@ -276,7 +277,4 @@ int main() {
         printf("Opção inválida. Por favor, escolha 1 para Modo Fácil ou 2 para Modo Difícil.\n");
         return 0;
     }
-        
-
-    }//acaba else
-//acaba main
+}
