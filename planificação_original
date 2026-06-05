@@ -1,0 +1,108 @@
+Mini Projeto em C
+ “Mastermind”
+
+
+1-1- O programa começa quando o utilizador introduz se ele quer começar o jogo introduzindo 0 ou 1 
+
+0 - não começar o jogo 
+1 - começar o jogo 
+
+ 2- o programa deve permitir que o jogador introduza 4 números para verificar se estão na posição certa no lugar certo ou se tá certo no lugar errado 
+
+3- O programa deve validar se os números são inteiros, positivos e se  o utilizador introduzir um número negativo ou não inteiro o programa deve alertar o utilizador.
+
+4-o programa rejeita os números não inteiros e números negativos ou se o utilizador tentar introduzir caracteres 
+
+5-o programa deve comparar o número que o utilizador inseriu com o número gerado aleatoriamente
+
+6- o programa deve mostrar se o número está correto mais no lugar errado e se ele está correto no lugar certo e se ele perdeu todas as suas tentativas ou se ele ganhou 
+
+7-o programa deve guardar as tentativas do utilizador e a quantidade das suas tentativas que ele ultilizou.
+
+8-quando o utilizador desistir ou quando ele ganhou 
+
+9- o utilizador pode parar o jogo na hora que ele quiser 
+
+10- pode ter 10 tentativas no máximo se passar dessas tentativas repete o jogo se o jogador quiser 
+
+
+5-
+
+1- o jogador não precisa introduzir o nome para continuar 
+
+2- sim ele irá escolher se quer continuar, terminar, continuar introduzindo 1 ou 0 sendo 
+
+0 - para terminar 
+1 - para continuar 
+
+3 - o jogador tem que introduzir os 4 números para o jogo comparar com os números aleatórios
+
+4 - o programa não deve aceitar números fracionários e números negativos 
+
+5 - o programa não deve aceitar números fracionários e números negativos
+
+5.2 - 
+1- no início do programa deve aparecer um menu de escolha para o utilizador se ele quer começar o jogo
+Ex 
+  ———————————
+   Começo do jogo 
+ ———————————
+
+Deseja começar o jogo ( introduza a tecla 1)
+
+Se não deseja começar o jogo (introduza a tecla 0)
+————————————————————————
+
+2- o programa mostra-la a quantidade de tentativas para o utilizador em forma de 
+
+ /           /
+/  2/10  /
+/          /
+
+E deve colocar quantas tentativas faltam 
+
+
+3- o programa irá mostrar 
+ Ex  
+   Valores corretos na posição certa: 4
+
+4- o programa irá mostrar 
+Ex
+   Valores corretos na posição errada: 0 
+
+
+5- “parabéns você acertou os números secretos!!!, os números eram %d %d %d %d”
+6- ”que pena, não conseguiu adivinhar os números secretos!, ;--; ” 
+7- “Espero que tenha gostado, vejo você na próxima!”
+
+
+6- 
+6.1
+  1- o programa deve ter 4 valores randomizados quando o jogador começar o jogo.
+
+2- todos os números gerados pela maquina devem ser todos números inteiros para o jogador fazer sua primeira tentativa já que o jogador só pode introduzir números positivos e inteiros 
+
+3- faz total sentido, pois podemos comparar o palpite do jogador com cada posição do array
+
+6.2
+ 1- o utilizador deve introduzir 4 números obrigatoriamente 
+
+2-sim o programa deve guardar os números introduzidos 
+
+3- usaremos a struct para o utilizador colocar os números 
+
+6.3- 1- não
+2- guardando os palpites do jogadores um array
+3-Gostaria de continuar/jogar denovo; Parabéns/que pena você ganhou/perdeu
+4- não
+
+Ação necessária  Nome possível da função   Recebe dados?  Altera dados?    Devolve resultado?
+iniciar o jogo           iniciar               sim            nao                sim
+introduzir os            tentativa             sim            não                sim
+4 números
+7- 
+
+Ação necessária      Nome possível da função  Recebe dados?  Altera dados?  Devolve resultado?
+Mostrar regras do jogo   mostrar_regras           não             não              não
+Ler uma tentativa    scanf, printf, chute         sim             sim              sim
+
