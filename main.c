@@ -23,28 +23,19 @@ int main() {
     if (iniciar == 0){
         printf("O jogo acabou medroso \n");
         return 1;
-    }   else if (iniciar > 1) {
-            printf("É só entre 1 e 0 seu animal\n");
-            return 1;
-    }   else {
-            srand(time(NULL));
+    } else if (iniciar > 1) {
+        printf("é só entre 1 e 0 seu animal\n");
+        return 1;
+    }  
+    else {
+        srand(time(NULL));
+        for(j = 0; j < 4; j++) {
+            numero_aleatorio[j] = (rand() % 6) + 1;
+            printf("%d\n", numero_aleatorio[j]);
 
-            for (j = 0; j < 4; j++) {
-                numero_aleatorio[j] = (rand() % 6) + 1;
 
-            for (k = 0; k < j; k++) {
-                if (numero_aleatorio[j] == numero_aleatorio[k]) {
-                j--;
-                break;
-            }
         }
-    }   
-        printf("%d\n", numero_aleatorio[0]);
-        printf("%d\n", numero_aleatorio[1]);
-        printf("%d\n", numero_aleatorio[2]);
-        printf("%d\n", numero_aleatorio[3]);
 
-        
         printf("Vamos começar o jogo\n");
         printf("Você tera 10 tentativas para adivinhar um código secreto\n");
         printf("--------");
@@ -59,6 +50,9 @@ int main() {
             printf("Qual teu chute de 4 numeros? (De forma a ficar: X X X X): ");
             for(L = 0; L < 4; L++){
             scanf("%d", &chute[L]);}
+            if (chute[L] != 4){
+                printf("\ne pra introduzir 4 numeros anta\n");
+        }
             if (chute[0] == numero_aleatorio[0] && chute[0] != numero_aleatorio[1] && chute[0] != numero_aleatorio[2] && chute[0] != numero_aleatorio[3]) {
                 printf("o primeiro numero ta certo e no lugar certo\n");
                 verificavitoria++;
