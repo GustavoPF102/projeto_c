@@ -1,0 +1,33 @@
+//                                 #RELATÓRIO DO PROJETO
+//o nosso codigo professor foi feito 100% a mão e com o material disponivel no Github do professor e sites da intenet para geração de numeros aleatorios 
+//utilizamos grande parte oque foi pedido pelo professor
+//
+//gerar 4 numeros aleatorios e fazer uma comparação desses numeros aleatorios com os numeros instroduzidos pelo ultilizador e dar como resposta para o ultilizador se os numeros introduzidos estão corretos mais na possição errada 
+//e se eles estão cartos na possição correta
+//
+//e contar as tentativas do ultilizador com 10 tentativas e se acabar essas tentativas ele tera que recomeçar o Mastermind 
+//
+//Funções do código:
+//Ironicamente,  um codigo grande como este esta funcionando com apenas uma função(poderia ser aprimorado com mais)
+//Esta função se chama "perguntarContinuar":
+int perguntarContinuar() { 
+    int continuar;
+
+    printf("Gostaria de continuar tentando? (1 - Sim, 0 - Não): ");
+    scanf("%d", &continuar);
+
+    if (continuar == 0) {
+        printf("--Você desistiu do jogo!--\n");
+        printf("Status do Jogo: Desistência!\n");
+        return 1; 
+    } else {
+        printf("Vamos continuar tentando\n");
+        return 0; 
+    }
+}
+//Essa função é responsável por perguntar ao usuário se ele deseja continuar tentando ou desistir do jogo. 
+//Ela lê a resposta do usuário e retorna um valor indicando a escolha do usuário (1 para desistir, 0 para continuar). 
+//Se o usuário escolher desistir, a função imprime uma mensagem de desistência e retorna 1. Caso contrário, ela imprime uma mensagem de continuação e retorna 0.
+
+//Consideramos que o código poderia ser aprimorado com mais funções para organizar melhor as diferentes partes do jogo, como a geração de números aleatórios, a comparação dos números, a contagem de tentativas, etc.
+//Entretanto, essas ideias de aprimoramento vieram a mente depois de termos escrito o código, e decidimos manter a estrutura atual para garantir que o jogo funcione corretamente dentro do prazo estabelecido.
